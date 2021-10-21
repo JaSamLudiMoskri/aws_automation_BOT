@@ -1,3 +1,4 @@
+#!/usr/bin/env python
 import fire
 import importlib
 import pkgutil
