@@ -1,4 +1,4 @@
-#!/usr/bin/env python3.9
+#!/usr/bin/env python
 from subprocess import call
 import os
 print('Hello user.')
