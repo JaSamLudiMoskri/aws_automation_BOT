@@ -1,3 +1,4 @@
+#!/usr/bin/env python3
 from subprocess import call
 import os
 print('Hello user.')
