@@ -12,6 +12,7 @@ def run():
 
         cwd = os.getcwd()
         cwd = cwd + "/download/"
+        os.chdir(cwd)
 
         client.download_file(Bucket=bucket_name , Key=key , Filename= filename )
         print(f"{key} is downloaded")

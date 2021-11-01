@@ -6,6 +6,7 @@ def run():
     try:
         cwd = os.getcwd()
         cwd = cwd + "/download/"
+        os.chdir(cwd)
         bucket_name=input("Please enter name of your bucket: ")
         client = boto3.client('s3')
 
