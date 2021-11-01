@@ -13,7 +13,7 @@ def run():
         cwd = os.getcwd()
         cwd = cwd + "/download/"
 
-        client.download_file(Bucket=bucket_name , Key=key , Filename= cwd + filename )
+        client.download_file(Bucket=bucket_name , Key=key , Filename= filename )
         print(f"{key} is downloaded")
         print(f"{filename} is placed into your dir.")
     except ClientError as e:
