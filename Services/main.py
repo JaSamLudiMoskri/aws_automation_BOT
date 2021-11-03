@@ -1,4 +1,3 @@
-#!/usr/bin/env python3
 import fire
 import importlib
 import pkgutil
@@ -11,5 +10,8 @@ def find_and_run_plugins(plugin_prefix):
             plugins[name] = module
     for name, module in plugins.items():
         module.run()
+
+def help():
+    print('-------S3:--------')
 if __name__=='__main__':
     fire.Fire()

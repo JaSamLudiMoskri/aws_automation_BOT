@@ -2,7 +2,7 @@
 from subprocess import call
 import os
 print('Hello user.')
-cwd = os.getcwd()
+cwd = (os.path.dirname(os.path.realpath(__file__)))
 os.chdir(cwd + '/Services')
 
 command = input("Enter command: ")

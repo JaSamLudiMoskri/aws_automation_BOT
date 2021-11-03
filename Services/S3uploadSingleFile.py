@@ -1,11 +1,32 @@
 import boto3
 from botocore.exceptions import ClientError
+import os
+import glob
+
 client = boto3.client('s3')
+
 def run():
     try:
-        filename = input("Enter full name of file that you want to upload: ")
-        bucket_name = input("Please enter name of your bucket: ")
-        client.upload_file(Filename=filename, Bucket = bucket_name , Key = filename)
-        print(f"File {filename} successfully uploaded.")
+        bucket_name = input("Please enter name of your bucket.")
+        file_type =input("Please enter right type of your file (example= txt , png , jpeg , pdf): ")
+        full_path = input("Please enter full path to your directory.")
+        if file_type == 'txt':
+                files = glob.glob(full_path+"/*.txt")
+                for file in files:
+                    client.upload_file(Filename=file , Bucket=bucket_name, Key=file.split("/")[-1])
+        elif file_type == 'png':
+                files = glob.glob(full_path+"/*.png")
+                for file in files:
+                    client.upload_file(Filename=file , Bucket=bucket_name, Key=file.split("/")[-1])
+        elif file_type == '.jpeg':
+                files = glob.glob(full_path+"/*.jpeg")
+                for file in files:
+                    client.upload_file(Filename=file , Bucket=bucket_name, Key=file.split("/")[-1])
+        elif file_type == '.pdf':
+                files = glob.glob(full_path+"/*.pdf")
+                for file in files:
+                    client.upload_file(Filename=file , Bucket=bucket_name, Key=file.split("/")[-1])
+        else:
+                print("We dont support that kind of format.")
     except ClientError as e:
         print(e)
