@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: automaticonn
-Version: 0.0.9
+Version: 0.0.10
 Summary: CLI tool that lets you to automaticly manage your AWS services without leaving terminal.
 Home-page: https://github.com/JaSamLudiMoskri/aws_automation_BOT
 Author: Marko Mandic
