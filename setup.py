@@ -16,11 +16,10 @@ class egg_info_ex(egg_info):
 
 with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
-with open("requirements.txt", "r", encoding="utf-8") as fh:
-    requirements = fh.read().splitlines()
+
 setup(
     name = 'automaticonn',
-    version = '0.0.13',
+    version = '0.0.14',
     author = 'Marko Mandic',
     author_email = 'mandicm223@gmail.com',
     license_files = ('LICENSE',),
@@ -30,8 +29,11 @@ setup(
     url = 'https://github.com/JaSamLudiMoskri/aws_automation_BOT',
     py_modules = ['automaticon', 'app'],
     packages = find_packages(),
-    install_requires = requirements,
-    python_requires='>=3.7',
+    install_requires = [
+        "boto3",
+        "fire"
+    ],
+    python_requires= {},
     classifiers=[
         "Programming Language :: Python :: 3.8",
         "Operating System :: OS Independent",
