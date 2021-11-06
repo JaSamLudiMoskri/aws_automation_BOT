@@ -17,7 +17,7 @@ class egg_info_ex(egg_info):
 with open("README.md", "r", encoding="utf-8") as fh:
     long_description = fh.read()
 with open("requirements.txt", "r", encoding="utf-8") as fh:
-    requirements = fh.read()
+    requirements = fh.read().splitlines()
 setup(
     name = 'automaticonn',
     version = '0.0.11',
@@ -30,7 +30,7 @@ setup(
     url = 'https://github.com/JaSamLudiMoskri/aws_automation_BOT',
     py_modules = ['automaticon', 'app'],
     packages = find_packages(),
-    install_requires = [requirements],
+    install_requires = requirements,
     python_requires='>=3.7',
     classifiers=[
         "Programming Language :: Python :: 3.8",
