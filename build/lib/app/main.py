@@ -3,7 +3,7 @@ import importlib
 import pkgutil
 import logging
 from colorama import Fore
-
+import cowsay
 def find_and_run_plugins(plugin_prefix):
     plugins={}
     print("Just a second")
@@ -16,7 +16,7 @@ def find_and_run_plugins(plugin_prefix):
 
 def cheat_sheat():
     print(Fore.WHITE ,'~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
-    print('HELP PGAE')
+    cowsay.cow('HELP PGAE')
     print(Fore.BLUE , '~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ WELCOME TO HELP PAGE! ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
     print(Fore.BLUE , '~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~')
     print('                         HERE IS LIST OF SERVICES YOU CAN INTERACT WITH: ')

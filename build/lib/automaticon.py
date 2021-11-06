@@ -3,11 +3,12 @@ from subprocess import call
 import os
 import logging
 import subprocess
+import cowsay
 from colorama import Fore
 
 def main():
     try:
-        print('Welcome user.')
+        cowsay.cow('Welcome user.')
         print(Fore.BLUE , 'THIS SOFTWARE WILL ENABLE YOU TO CONTROL YOUR AWS SERVICES WHILE NOT LEAVING YOUR TERMINAL.\n\n')
         print(Fore.RED , '------------------------------------------------------ATTENTION!------------------------------------------------------')
         print(' PLEASE MAKE YOU CONFIGURED YOUR AWS ACCOUNT ON YOUR SYSTEM, AND BE SURE TO FOLLOW INSTRUCTIONS FROM SOFTWARE STICTLY')

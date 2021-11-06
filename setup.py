@@ -19,7 +19,7 @@ with open("README.md", "r", encoding="utf-8") as fh:
 with open("requirements.txt", "r", encoding="utf-8") as fh:
     requirements = fh.read()
 setup(
-    name = 'automaticon',
+    name = 'automaticonn',
     version = '0.0.1',
     author = 'Marko Mandic',
     author_email = 'mandicm223@gmail.com',
