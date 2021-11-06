@@ -1,4 +1,3 @@
 boto3
-colorama
-fire
+fire==1.14.0
 

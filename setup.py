@@ -20,7 +20,7 @@ with open("requirements.txt", "r", encoding="utf-8") as fh:
     requirements = fh.read().splitlines()
 setup(
     name = 'automaticonn',
-    version = '0.0.12',
+    version = '0.0.13',
     author = 'Marko Mandic',
     author_email = 'mandicm223@gmail.com',
     license_files = ('LICENSE',),
