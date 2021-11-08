@@ -1,2 +1,2 @@
 boto3
-fire==1.14.0
+fire

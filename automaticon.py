@@ -33,3 +33,5 @@ def main():
     except subprocess.SubprocessError as e:
         logging.exception(e)
 
+main()
+

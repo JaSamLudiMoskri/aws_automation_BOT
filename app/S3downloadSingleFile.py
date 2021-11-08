@@ -11,7 +11,9 @@ def run():
         filename=input("Please sign  name to file that you want to download")
 
         cwd = os.getcwd()
-        cwd = cwd + "/download/"
+        folder_name = input('Please input the name for directory that we will be using for placment of downloaded files: ')
+        os.mkdir(folder_name)
+        cwd = cwd + '/' + folder_name + '/'
         os.chdir(cwd)
 
         client.download_file(Bucket=bucket_name , Key=key , Filename= filename )
